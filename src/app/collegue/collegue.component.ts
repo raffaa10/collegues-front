@@ -8,14 +8,25 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CollegueComponent implements OnInit {
 
   @Input() col;
+
+  modeAffichage = true;
+
   constructor() { }
 
   modifierCol() {
-    alert("Vous allez modifier le collegue")
+    alert("Vous allez modifier le collegue");
+    this.modeAffichage = false;
+
   }
   creerCol(){
     console.log("Création d’un nouveau collègue.")
   }
+
+  validerCol(): void {
+    this.modeAffichage = true;
+    alert("Verifiez les modifications");
+  }
+
 
   ngOnInit(): void {
   }
