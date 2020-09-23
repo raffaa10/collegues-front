@@ -10,6 +10,13 @@ export class CollegueComponent implements OnInit {
   @Input() col;
   constructor() { }
 
+  modifierCol() {
+    alert("Vous allez modifier le collegue")
+  }
+  creerCol(){
+    console.log("Création d’un nouveau collègue.")
+  }
+
   ngOnInit(): void {
   }
 
