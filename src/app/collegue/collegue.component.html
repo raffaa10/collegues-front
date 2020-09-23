@@ -8,7 +8,7 @@
         <div class="col card-text">Matricule :</div><div class="col card-text">{{col.matricule}}</div>
       </div>
       <div class="row">
-          <div class="col card-text">Nom :</div><div class="col card-text">{{col.nom}}</div>
+          <div class="col card-text">Nom :</div><div class="col card-text">{{col.nom | uppercase}}</div>
       </div>
       <div class="row">
         <div class="col card-text">Prénoms :</div><div class="col card-text">{{col.prenoms}}</div>
@@ -25,10 +25,10 @@
 </div>
 <br>
 <div class="row" style="margin-left: 2px;">
-  <div class="col-2">
+  <div class="col-7">
     <a href="#" *ngIf="modeAffichage" (click)="creerCol()" class="badge badge-light">Créer un nouveau collègue</a>
   </div>
-  <div class="col-2">
+  <div class="col-3">
     <button *ngIf="modeAffichage" type="button" class="btn btn-primary" (click)="modifierCol()">Modifier</button>
     <button *ngIf="!modeAffichage" type="button" class="btn btn-primary" (click)="validerCol()">Valider</button>
   </div>
