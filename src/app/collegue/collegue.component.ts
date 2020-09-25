@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service'
 
 @Component({
   selector: 'app-collegue',
@@ -11,11 +12,12 @@ export class CollegueComponent implements OnInit {
 
   modeAffichage = true;
 
-  constructor() { }
+  constructor(private dateServ: DataService) { }
 
   modifierCol() {
     alert("Vous allez modifier le collegue");
     this.modeAffichage = false;
+    this.col = this.dateServ.recupererCollegueCourant();
 
   }
   creerCol(){
@@ -29,6 +31,7 @@ export class CollegueComponent implements OnInit {
 
 
   ngOnInit(): void {
+    //this.col = this.dateServ.recupererCollegueCourant();
   }
 
 }
